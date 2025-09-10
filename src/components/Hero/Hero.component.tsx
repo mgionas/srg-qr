@@ -20,7 +20,7 @@ export default function Hero({ bannersData }: { bannersData: Banner[] }) {
         slidesPerView={1}
         centeredSlides={true}
         pagination={{ clickable: true }}
-        // autoplay={{ delay: 5000, disableOnInteraction: false }}
+        autoplay={{ delay: 5000, disableOnInteraction: false }}
         className="z-50 h-screen w-full" // Full width and height
         style={{}}
       >

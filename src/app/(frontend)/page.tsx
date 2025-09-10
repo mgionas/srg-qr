@@ -1,5 +1,4 @@
 import Hero from '@/components/Hero/Hero.component'
-import './styles.css'
 import { Separator } from '@/components/ui/separator'
 import CardsWithLogos from '@/components/Cards&Logos/CardsWithLogos.components'
 import { fetchBanners } from '@/actions/fetchBanners'
@@ -19,7 +18,6 @@ export default async function HomePage({ searchParams }: PageProps) {
   // Await searchParams before using
   const params = await searchParams
   const selectedCategory = params.category
-  // console.log(itemsByCompany, 'itemsByCompany')
   return (
     <div className="flex h-full w-full flex-col gap-3">
       <Hero bannersData={banners.docs} />
