@@ -9,6 +9,13 @@ import sharp from 'sharp'
 
 import { Users } from './collections/Users'
 import { Media } from './collections/Media'
+import { Venues } from './collections/Venues'
+import { ItemsPDF } from './collections/ItemPDF'
+import { Items } from './collections/Items'
+import { Company } from './collections/Company'
+import { Categories } from './collections/Category'
+import Banner from './collections/Banner'
+import { Logos } from './collections/Logos'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
@@ -19,8 +26,15 @@ export default buildConfig({
     importMap: {
       baseDir: path.resolve(dirname),
     },
+    avatar: 'default',
+    autoLogin: {
+      email: 'viktorasatiani77@gmail.com',
+      password: '123123123',
+      prefillOnly: true,
+    },
+    dateFormat: 'dd/MMM/yyyy',
   },
-  collections: [Users, Media],
+  collections: [Users, Media, Venues, ItemsPDF, Items, Company, Categories, Banner, Logos],
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || '',
   typescript: {
