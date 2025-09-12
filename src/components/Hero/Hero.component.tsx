@@ -30,7 +30,7 @@ export default function Hero({ bannersData }: { bannersData: Banner[] }) {
               <SwiperSlide className="flex h-full w-full items-center justify-center">
                 {/* Background image with brightness applied only to background */}
                 <div
-                  className="imageSize absolute inset-0 -z-10 bg-no-repeat object-cover brightness-85"
+                  className="absolute inset-0 -z-10 bg-cover bg-center bg-no-repeat brightness-85"
                   style={{
                     backgroundImage: `url('${
                       typeof banner.image === 'object' ? banner.image?.url : '/heroImage.png'
@@ -63,7 +63,7 @@ export default function Hero({ bannersData }: { bannersData: Banner[] }) {
           <SwiperSlide className="flex h-full w-full items-center justify-center">
             {/* Background image with brightness applied only to background */}
             <div
-              className="imageSize absolute inset-0 -z-10 bg-no-repeat brightness-85"
+              className="absolute inset-0 -z-10 bg-cover bg-center bg-no-repeat brightness-85"
               style={{
                 backgroundImage: `url('/heroImage.png')`,
               }}

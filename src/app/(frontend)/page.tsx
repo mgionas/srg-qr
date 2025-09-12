@@ -1,10 +1,10 @@
+export const dynamic = 'force-dynamic'
 import Hero from '@/components/Hero/Hero.component'
 import { Separator } from '@/components/ui/separator'
 import CardsWithLogos from '@/components/Cards&Logos/CardsWithLogos.components'
 import { fetchBanners } from '@/actions/fetchBanners'
 import { cookies } from 'next/headers'
 import { fetchItemsByCompanyId } from '@/actions/fetchItemsByCompanyId'
-
 interface PageProps {
   searchParams: { category?: string }
 }
